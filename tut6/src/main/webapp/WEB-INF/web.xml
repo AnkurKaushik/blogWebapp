@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         
+
+         <servlet>
+         	<servlet-name>guestbook</servlet-name>
+         	<servlet-class>GuestbookServlet</servlet-class>
+         </servlet>
+         <servlet-mapping>
+         	<servlet-name>guestbook</servlet-name>
+         	<url-pattern>/guestbook</url-pattern>
+         </servlet-mapping>
+         
+        
+         
+        <servlet>
+
+        <servlet-name>sign</servlet-name>
+
+        <servlet-class>SignGuestbookServlet</servlet-class>
+
+    	</servlet>
+
+	    <servlet-mapping>
+	
+	        <servlet-name>sign</servlet-name>
+	
+	        <url-pattern>/sign</url-pattern>
+	
+	    </servlet-mapping>
+	    
+	    <servlet>
+	    
+<servlet-name>cronServlet</servlet-name>
+<servlet-class>guestbook.cronServlet</servlet-class>
+</servlet><servlet-mapping>
+<servlet-name>cronServlet</servlet-name>
+<url-pattern>/cronServlet</url-pattern>
+</servlet-mapping>
+	    
+         
+  <welcome-file-list>
+    <welcome-file>guestbook.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
